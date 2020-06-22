@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --veryLightGrayishBlue: hsl(240, 78%, 98%);
+    --lightGrayishBlue: hsl(234, 14%, 74%);
+    --grayishBlue: hsl(233, 13%, 49%);
+    --darkGrayishBlue: hsl(232, 13%, 33%);
+}
+
+body {
+    margin: 0;
+    padding: 2% 8%;
+    text-align: center;
+    background-color: var(--veryLightGrayishBlue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+h1 {
+    color: var(--grayishBlue);
+}
+
+.sub {
+    color: var(--lightGrayishBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rect {
+    margin: 0% 2%;
+    width: 55px;
+    height: 4vh;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 30px;
+    
+}
+
+#circle {
+    width: 40%;
+    height: 75%;
+    background-color: white;
+    border-radius: 50%;
+    margin: 6%;
+    cursor: pointer;
+}
+#rect:active{
+    background: var(--lightGrayishBlue);
+}
+.right{
+    float: right;
+    margin: 6%;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3%;
+}
+
+.basic,
+.master {
+    padding: 4% 0% 2%;
+    width: 28%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+    color: var(--grayishBlue);
+}
+
+.basic h1,
+.master h1{
+    color: var(--darkGrayishBlue);
+}
+
+.prof h1 {
+    color: white;
+}
+
+h1 span {
+    font-size: 3rem;
+}
+
+.prof {
+    padding-top: 5.7%;
+    width: 28%;
+    background: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    height: 27rem;
+    border-radius: 10px;
+    color: white;
+}
+
+button {
+    width: 80%;
+    padding: 4%;
+    margin: 4%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.basic button,
+.master button,
+.prof button:hover {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+}
+
+.prof button,
+.basic button:hover,
+.master button:hover {
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+.basic button:hover,
+.master button:hover {
+    border: 1px solid var(--grayishBlue);
+}
+
+.prof button:hover {
+    border: 1px solid white;
+}
+
+hr {
+    width: 80%;
+    margin: 4% auto;
+}
+
+@media screen and (max-width:1050px) {
+    .prof {
+        padding-top: 5.7%;
+        height: 23rem;
+    }
+}
+
+@media screen and (max-width:870px) {
+
+    .basic,
+    .master,
+    .prof {
+        width: 100%;
+        z-index: 1;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .cards {
+        display: inline-block;
+        width: 80%;
+        margin: auto;
+    }
+
+    .basic,
+    .master,
+    .prof {
+        padding: 4% 0% 2%;
+        height: 100%;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    #imgBottom {
+        display: none;
+    }
+}
